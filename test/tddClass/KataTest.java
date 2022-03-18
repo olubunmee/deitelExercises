@@ -78,4 +78,28 @@ public class KataTest {
         System.out.print(number + " ");
         number = number + 2;}
     }
+
+    @Test
+    public void evenAndOdd(){
+        int number = 11;
+        if (number % 2 ==0){
+            System.out.print("true");}
+            else
+        {System.out.print("false");
+        }
+    }
+
+    @Test
+    public void evenOrOdd(){
+        Kata kata = new Kata();
+        boolean number = kata.isEven(40);
+        assertTrue(kata.isEven(40));
+    }
+
+    @Test
+    public void biggestInteger(){
+        Kata kata = new Kata();
+        int number = kata.biggest(20,22,7,40,5);
+        assertEquals(40, number);
+    }
 }

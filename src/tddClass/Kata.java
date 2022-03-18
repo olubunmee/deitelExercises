@@ -47,4 +47,25 @@ public class Kata {
     public int quotient(int numOne, int numTwo) {
         return numOne / numTwo;
     }
+
+    public boolean isEven(int value){
+        if (value % 2 == 0)
+        {return true;}
+        return false;
+    }
+
+    public int biggest(int numOne, int numTwo, int numThree, int numFour, int numFive) {
+        int largest = numOne;
+
+        if (numTwo > numOne) {
+            largest = numTwo;}
+        if (numThree > largest) {
+            largest = numThree;}
+        if (numFour > largest) {
+            largest = numFour;}
+        if (numFive > largest) {
+            largest = numFive;}
+
+        return largest;
+    }
 }
