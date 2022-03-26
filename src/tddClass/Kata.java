@@ -65,7 +65,19 @@ public class Kata {
             largest = numFour;}
         if (numFive > largest) {
             largest = numFive;}
-
         return largest;
+    }
+
+    public int factorsOfNumbers(int input) {
+        int count = 0;
+        for (int i = 1; i <= input; i++){
+        if (input % i == 0) {
+            count++;}
+        }
+        return count;
+    }
+
+    public boolean primeNumber(boolean prime) {
+        return true;
     }
 }

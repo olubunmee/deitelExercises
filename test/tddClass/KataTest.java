@@ -102,4 +102,18 @@ public class KataTest {
         int number = kata.biggest(20,22,7,40,5);
         assertEquals(40, number);
     }
+
+    @Test
+    public void factors(){
+        Kata factorNumbers = new Kata();
+        int number = factorNumbers.factorsOfNumbers(20);
+        assertEquals(6, number);
+    }
+
+    @Test
+    public void primeTest(){
+        Kata prime = new Kata();
+        boolean number = prime.primeNumber(true);
+        assertTrue(number);
+    }
 }
