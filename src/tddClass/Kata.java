@@ -80,4 +80,24 @@ public class Kata {
     public boolean primeNumber(boolean prime) {
         return true;
     }
+
+    public int findMaximumFrom(int[] scores) {
+        int maximum = scores[0];
+        int j;
+        for (j = 0; j <= 4; j++){
+            if (scores[j] > maximum) {
+                maximum = scores[j];
+            }
+        }
+        return maximum;
+    }
+
+    public int findMinimumFrom(int[] scores) {
+        int minimum = scores[4];
+        int k;
+        for (k = 4; k > 1; k--){
+            minimum = scores[k];
+        }
+        return minimum;
+    }
 }

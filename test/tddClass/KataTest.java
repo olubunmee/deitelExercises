@@ -1,5 +1,6 @@
 package tddClass;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -115,5 +116,19 @@ public class KataTest {
         Kata prime = new Kata();
         boolean number = prime.primeNumber(true);
         assertTrue(number);
+    }
+
+    @Test
+    public void maximumNumberInArrayTest(){
+        Kata kata = new Kata();
+        int [] scores = {34, 23, 14, 45, 23};
+        assertEquals(45, kata.findMaximumFrom(scores));
+    }
+
+    @Test
+    public void minimumNumberInArrayTest(){
+        Kata kata = new Kata();
+        int [] scores = {34, 23, 14, 45, 23};
+        assertEquals(14, kata.findMinimumFrom(scores));
     }
 }
