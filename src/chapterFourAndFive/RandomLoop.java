@@ -11,7 +11,6 @@ public class RandomLoop {
 
     public static void main(String[] args) {
         generateQuestions();
-
         System.out.println(correct++);
         System.out.println(wrong++);
 
