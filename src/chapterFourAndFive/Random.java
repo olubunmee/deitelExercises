@@ -56,7 +56,6 @@ public class Random {
                     }else System.out.println("wrong");
                     wrong++;
                 }
-                break;
             }
 
         }
