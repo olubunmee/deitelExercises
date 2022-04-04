@@ -1,4 +1,3 @@
 package eStore;
 
-public enum CardType {masterCard, visa, verve, americanExpress};
-
+public enum CardType {MASTER_CARD, VISA, VERVE, AMERICAN_EXORESS}
