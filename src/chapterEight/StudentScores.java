@@ -1,6 +1,5 @@
 package chapterEight;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class StudentScores {
@@ -17,17 +16,17 @@ public class StudentScores {
 
         int[][] grade = new int[students][subjects];
 
-        for (int i = 0; i <= 2; i++){
+        for (int i = 0; i < students; i++){
             System.out.println("Enter Student number: ");
             grade [i][i] = input.nextInt();
-            for (int j = 0 ; j <= 2; j++){
+            for (int j = 0 ; j < subjects; j++){
                 System.out.println("Enter grade: ");
                 grade[i][j] = input.nextInt();
             }
         }
-        for (int i = 0; i <= 2; i++){
-            for (int j = 0; j <= 2; j++){
-                System.out.print(grade[i][j]);
+        for (int i = 0; i < students; i++){
+            for (int j = 0; j < subjects; j++){
+                System.out.print(grade[i][j] + " ");
             }
             System.out.println();
         }
