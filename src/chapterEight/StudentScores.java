@@ -19,8 +19,6 @@ public class StudentScores {
 
         int[][] grade = new int[students][subjects];
 
-        // String[][] course = new String[Java][Python];
-
 
         for (int i = 0; i < students; i++){
             System.out.println("Enter Student number: ");
@@ -30,15 +28,12 @@ public class StudentScores {
                 grade[i][j] = input.nextInt();
             }
         }
-
-        System.out.println("S/N");
-        for (int i = 0; i < subjects; i++){
-            System.out.println("    ");
-        }
+        System.out.print("S/N   Java    Python  Database");
+        System.out.println(" ");
         for (int i = 0; i < students; i++){
-            System.out.print(i + 1 + "    ");
+            System.out.print(i + 001 + "       ");
             for (int j = 0; j < subjects; j++){
-                System.out.print(grade[i][j] + "    ");
+                System.out.print(grade[i][j] + "       ");
             }
             System.out.println();
         }
