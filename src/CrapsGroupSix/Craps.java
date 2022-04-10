@@ -6,49 +6,44 @@ import java.util.Scanner;
 public class Craps {
     static SecureRandom random = new SecureRandom();
     static Scanner scanner = new Scanner(System.in);
-    static int firstDie = 1 + random.nextInt(6);
-    static int secondDie = 1 + random.nextInt(6);
-    static int sum = firstDie + secondDie;
-    static int round = 0;
-
+    static int point = 0;
 
     public static void main(String[] args) {
         System.out.println("Welcome to the game of craps");
-        System.out.println("Press y to roll dice: ");
+        System.out.println("Press y to continue");
         scanner.next("y");
-
-        rollDice();
-        win();
-        lose();
-        point();
-    }
-    public static void rollDice(){
-        System.out.println(firstDie + ", " + secondDie + " -->> " + sum);
+        firstRoll();
+        secondRoll();
     }
 
-    public static void win(){
-        if (sum == 7 || sum == 11)
+    public static void firstRoll(){
+        int firstDie = 1 + random.nextInt(6);
+        int secondDie = 1 + random.nextInt(6);
+        int sum = firstDie + secondDie;
+        System.out.println(firstDie + ", " + secondDie + " = " + sum);
+        if ((sum == 7) || (sum == 11)){
             System.out.println("Yay, you win!");
-    }
-    
-    public static void lose(){
-        if (sum == 2 || sum == 3 || sum == 12)
+        }
+        else if ((sum == 2) || (sum == 3) || (sum == 12)){
             System.out.println("Oops, you lose!");
+        }
+        else System.out.println("Your point, Try again!");
+        
     }
-    
-    public static void point(){
-        if (sum == 4 || sum == 5 || sum == 6 || sum == 8 || sum == 9 || sum == 10){
-            System.out.println("Your point, roll again!");
-            int point = sum;
-            rollDice();
-            for(int i = 1; i != 0; i++){
-                if(sum == 7){
-                    System.out.println("You lose");
-                break;}
-                else if (sum == point)
-                    System.out.println("You win");
-                break;
-            }
+
+    public static void secondRoll(){
+        int firstDie = 1 + random.nextInt(6);
+        int secondDie = 1 + random.nextInt(6);
+        int sum = firstDie + secondDie;
+        System.out.println(firstDie + ", " + secondDie + " = " + sum);
+        if (sum == 7){
+            System.out.println("Oops, you lose!");
+        }
+        else if (sum == point){
+            System.out.println("Yay, you win!");
+        }
+        else {
+            System.out.println("Try again!");
         }
     }
 }

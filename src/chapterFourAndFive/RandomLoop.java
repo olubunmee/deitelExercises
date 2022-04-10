@@ -18,13 +18,13 @@ public class RandomLoop {
 
     public static void changeOperators(int input, int firstRandomNumber, int secondRandomNumber, int operator){
        int right = switch (operator){
-            case 1 -> firstRandomNumber + secondRandomNumber;
+            case '+' -> firstRandomNumber + secondRandomNumber;
 
-            case 2 -> firstRandomNumber - secondRandomNumber;
+            case '-' -> firstRandomNumber - secondRandomNumber;
 
-            case 3 -> firstRandomNumber * secondRandomNumber;
+            case '*' -> firstRandomNumber * secondRandomNumber;
 
-            case 4 -> firstRandomNumber / secondRandomNumber;
+            case '/' -> firstRandomNumber / secondRandomNumber;
 
            default -> 0;
        };
@@ -46,18 +46,22 @@ public class RandomLoop {
                     System.out.println(firstRandomNumber + "+" + secondRandomNumber + "=");
                     input.nextInt();
                 }
+                break;
                 case 2:{
                     System.out.println(firstRandomNumber + "*" + secondRandomNumber + "=");
                     input.nextInt();
                 }
+                break;
                 case 3:{
                     System.out.println(firstRandomNumber + "-" + secondRandomNumber + "=");
                     input.nextInt();
                 }
+                break;
                 case 4:{
                     System.out.println(firstRandomNumber + "/" + secondRandomNumber + "=");
                     input.nextInt();
                 }
+                break;
             }
         }
     }

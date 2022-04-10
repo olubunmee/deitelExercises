@@ -7,8 +7,8 @@ import java.util.Scanner;
 public class SolveProblems {
     public static void main(String[] args) {
 
-        Scanner input = new Scanner(System.in);
-        System.out.println("Enter dividend: ");
+      Scanner input = new Scanner(System.in);
+/*        System.out.println("Enter dividend: ");
         int dividend = input.nextInt();
 
         System.out.println("Enter divisor: ");
@@ -37,6 +37,20 @@ public class SolveProblems {
            counter++;
             answer = answer + first;
         }
-        System.out.println("product: " + answer);
+        System.out.println("product: " + answer);*/
+
+// reverse an integer
+
+        System.out.println("Enter three digit integer: ");
+        int number = input.nextInt();
+        int i = number % 10;
+        int j = number / 10;
+        int k = j % 10;
+        int a = j / 10;
+        int b = a % 10;
+        System.out.printf("%s%s%s", i,k,b);
+
+
+
     }
 }
