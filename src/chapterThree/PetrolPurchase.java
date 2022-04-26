@@ -54,4 +54,11 @@ public class PetrolPurchase {
     public void setPercentage(double percentage) {
         this.percentage = percentage;
     }
+
+    public double getPurchaseAmount(int quantity){
+        double totalPrice = quantity * price;
+        return (totalPrice - (percentage * totalPrice));
+    }
+
 }
+

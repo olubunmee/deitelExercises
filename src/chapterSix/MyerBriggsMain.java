@@ -1,6 +1,6 @@
-package chapterSixAndSeven;
+package chapterSix;
 
-import static chapterSixAndSeven.MyerBriggs.*;
+import static chapterSix.MyerBriggs.*;
 
 public class MyerBriggsMain {
     public static void main(String[] args) {
