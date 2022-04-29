@@ -24,5 +24,4 @@ public class Car {
         double discountInDouble = (double) percentage / 100;
         return price - discountInDouble * price;
     }
-
 }
