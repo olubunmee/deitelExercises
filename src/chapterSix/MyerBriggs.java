@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class MyerBriggs {
 
 
+
     static Scanner input = new Scanner(System.in);
     static int extrovert = 0;
     static int introvert = 0;

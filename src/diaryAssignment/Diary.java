@@ -4,7 +4,12 @@ public class Diary {
 
     private String pin;
 
-    public void pin(String lockCode) {
-        pin = lockCode;
+    public Diary(String pin) {
+        this.pin = pin;
     }
+
+    public boolean isLocked(String pin) {
+        return this.pin == pin;
+    }
+
 }
