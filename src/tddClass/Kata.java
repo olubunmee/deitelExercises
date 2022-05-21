@@ -1,5 +1,7 @@
 package tddClass;
 
+import java.util.Arrays;
+
 public class Kata {
     public int add(int firstNumber, int secondNumber) {
         return firstNumber + secondNumber;
@@ -99,5 +101,10 @@ public class Kata {
             minimum = scores[k];
         }
         return minimum;
+    }
+
+    public static void main(String[] args) {
+        int [] array = new int[20];
+        System.out.println(Arrays.toString(array));
     }
 }

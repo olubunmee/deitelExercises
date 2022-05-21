@@ -131,4 +131,5 @@ public class KataTest {
         int [] scores = {34, 23, 14, 45, 23};
         assertEquals(14, kata.findMinimumFrom(scores));
     }
+
 }
