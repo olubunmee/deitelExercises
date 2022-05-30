@@ -15,7 +15,6 @@ public class Turtle {
         biro.penDown();
     }
 
-
     public void penUp() {
         biro.penUp();
     }
@@ -44,13 +43,24 @@ public class Turtle {
         else currentDirection = Direction.EAST;
     }
 
-    public void move(int noOfSteps) {
-        if(currentDirection == Direction.EAST) increaseColumnBy(noOfSteps);
-        if (currentDirection == Direction.SOUTH) increaseRowBy(noOfSteps);
-        if (currentDirection == Direction.WEST) decreaseColumnBy(noOfSteps);
-        if (currentDirection == Direction.NORTH) decreaseRowBy(noOfSteps);
-
+    public void move(int noOfSteps, SketchPad pad) {
+        if (isPenDown()){
+            if (currentDirection == Direction.EAST) writeOnColumn(noOfSteps, pad);
         }
+            if(currentDirection == Direction.EAST) increaseColumnBy(noOfSteps);
+            if (currentDirection == Direction.SOUTH) increaseRowBy(noOfSteps);
+            if (currentDirection == Direction.WEST) decreaseColumnBy(noOfSteps);
+            if (currentDirection == Direction.NORTH) decreaseRowBy(noOfSteps);
+        }
+
+    private void writeOnColumn(int noOfSteps, SketchPad pad) {
+        int [][] floor = pad.getFloor();
+        int row = currentPosition.getRow();
+        int column = currentPosition.getColumn();
+        for (int i = column; i < column + noOfSteps; i++) {
+            floor[row][i] = 1;
+        }
+    }
 
     private void increaseRowBy(int noOfSteps) {
         int currentRowPosition = currentPosition.getRow();

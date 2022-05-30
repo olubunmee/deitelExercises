@@ -25,7 +25,7 @@ public class Kata {
         return result;
     }
 
-    public boolean ispalindrome(int isPalindrome) {
+    public boolean isPalindrome(int isPalindrome) {
         return true;
     }
 

@@ -39,7 +39,7 @@ public class Diary {
             if (entry.getTitle().equals(title))
                 return title;
         }
-        return "entry not found";
+        return "not found";
     }
     public void deleteEntry(String title){
         for (int i = 0; i < entries.size(); i++) {

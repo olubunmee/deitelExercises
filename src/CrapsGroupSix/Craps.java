@@ -13,6 +13,7 @@ public class Craps {
         System.out.println("Press y to continue");
         scanner.next("y");
         firstRoll();
+        secondRoll();
     }
 
     public static void firstRoll(){
@@ -27,7 +28,6 @@ public class Craps {
             System.out.println("Oops, you lose!");
         }
         else System.out.println("Your point, Try again!");
-        secondRoll();
     }
 
     public static void secondRoll(){

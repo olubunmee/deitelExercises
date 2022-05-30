@@ -8,10 +8,12 @@ import static org.junit.jupiter.api.Assertions.*;
 public class TurtleTest {
 
     private Turtle ijapa;
+    private SketchPad pad;
 
     @BeforeEach
     public void setup(){
         ijapa = new Turtle();
+        pad = new SketchPad(0, 0);
     }
 
     @Test
@@ -104,33 +106,41 @@ public class TurtleTest {
     }
     @Test
     public void turtleCanMoveForwardFacingEast(){
-        ijapa.move(3);
+        ijapa.move(3, pad);
         assertEquals(new Position(0,2), ijapa.getCurrentPosition());
     }
     @Test
     public void turtleCanMoveForwardFacingSouth(){
         ijapa.turnRight();
-        ijapa.move(3);
+        ijapa.move(3, pad);
         assertEquals(new Position(2, 0), ijapa.getCurrentPosition());
     }
     @Test
     public void turtleCanMoveForwardFacingWest(){
-        ijapa.move(3);
+        ijapa.move(3, pad);
         ijapa.turnRight();
-        ijapa.move(3);
+        ijapa.move(3, pad);
         ijapa.turnRight();
-        ijapa.move(3);
+        ijapa.move(3, pad);
         assertEquals(new Position(2, 0), ijapa.getCurrentPosition());
     }
     @Test
     public void turtleCanMoveForwardFacingNorth(){
-        ijapa.move(3);
+        ijapa.move(3, pad);
         ijapa.turnRight();
-        ijapa.move(3);
+        ijapa.move(3, pad);
         ijapa.turnRight();
         ijapa.turnRight();
-        ijapa.move(3);
+        ijapa.move(3, pad);
         assertEquals(new Position(0, 2), ijapa.getCurrentPosition());
     }
-
+    @Test
+    public void turtleWritesWhenPenIsDown(){
+        ijapa.penDown();
+        SketchPad pad = new SketchPad(5, 5);
+        ijapa.move(5, pad);
+        String expected = "* * * * * \n         \n         \n         \n         \n";
+        assertEquals(expected, pad.toString());
+        assertEquals(new Position(0, 4), ijapa.getCurrentPosition());
+    }
 }

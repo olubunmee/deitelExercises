@@ -1,6 +1,5 @@
 package tddClass;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -47,7 +46,7 @@ public class KataTest {
     @Test
     public void palindrome(){
         Kata palindrome = new Kata();
-        boolean result = palindrome.ispalindrome(12981);
+        boolean result = palindrome.isPalindrome(12981);
         assertTrue(result);
     }
 

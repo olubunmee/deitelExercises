@@ -69,7 +69,7 @@ public class ArrayListTest {
         list.add("Chains");
         assertEquals(5, list.size());
         list.add("PlayStation");
-        assertEquals(6, list.size());
+        assertEquals(10, list.size());
 
     }
 

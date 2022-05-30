@@ -3,35 +3,36 @@ package interfaceClass;
 public class ArrayList implements List {
 
     private int counter = 0;
-    private String[] db = new String[5];
+    private int capacity = 5;
+    private String[] array = new String[capacity];
 
     @Override
     public void add(String item) {
-        db[counter] = item;
+        array[counter] = item;
         counter++;
     }
 
     @Override
     public void add(int index, String item) {
-        for (int i = 0; i < db.length; i++) {
-            db[index] = item;
+        for (int i = 0; i < array.length; i++) {
+            array[index] = item;
         }
     }
 
     @Override
     public void remove(String item) {
-        db[counter] = item;
+        array[counter] = item;
         counter--;
     }
 
     @Override
     public String get(int index) {
-        return db[index];
+        return array[index];
     }
 
     @Override
     public String getItem(String item) {
-        return db[counter] = item;
+        return array[counter] = item;
     }
 
     @Override
@@ -42,5 +43,16 @@ public class ArrayList implements List {
     @Override
     public int size() {
         return counter;
+    }
+
+    public void increaseSize(){
+        int newDb = capacity * 2;
+        String[] newArray = new String[newDb];
+
+        for (int i = 0; i < size(); i++) {
+            newArray[i] = array[i];
+        }
+        capacity = newDb;
+        array = newArray;
     }
 }

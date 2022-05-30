@@ -23,8 +23,8 @@ public class Bike {
     public void accelerate() {
         accelerate++;
         if (accelerate >= 21 && accelerate <= 30){accelerate = (accelerate + 1);}
-        if (accelerate >= 31 && accelerate <= 40){accelerate = (accelerate + 2);}
-        if (accelerate >= 41 && accelerate <= 50){accelerate = (accelerate + 3);}
+        else if (accelerate >= 31 && accelerate <= 40){accelerate = (accelerate + 2);}
+        else if (accelerate >= 41 && accelerate <= 50) accelerate = (accelerate + 3);
     }
 
     public int getDeccelerate() {
@@ -34,7 +34,7 @@ public class Bike {
     public void deccelerate() {
         deccelerate--;
         if (deccelerate <= 40 && deccelerate >= 31){deccelerate = (deccelerate - 1);}
-        if (deccelerate <= 30 && deccelerate >= 21){deccelerate = (deccelerate - 2);}
-        if (deccelerate <= 20 && deccelerate >= 0){deccelerate = (deccelerate - 3);}
+        else if (deccelerate <= 30 && deccelerate >= 21){deccelerate = (deccelerate - 2);}
+        else if (deccelerate <= 20 && deccelerate >= 0){deccelerate = (deccelerate - 3);}
     }
 }

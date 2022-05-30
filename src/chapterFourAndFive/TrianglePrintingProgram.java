@@ -3,18 +3,16 @@ package chapterFourAndFive;
 public class TrianglePrintingProgram {
     public static void main(String[] args) {
 
-//        i = row
-//        j = column
-        for(int i = 1; i <= 10; i++) {
-            for(int j = 1; j <= i; j++) {
+        for(int row = 1; row <= 10; row++) {
+            for(int column = 1; column <= row; column++) {
                 System.out.print("*");
             }
             System.out.println();
         }
         System.out.println();
 
-        for(int i = 10; i >= 1; i--) {
-            for(int j = 1; j <= i; j++) {
+        for(int row = 10; row >= 1; row--) {
+            for(int column = 1; column <= row; column++) {
                 System.out.print("*");
             }
             System.out.println();
@@ -22,11 +20,11 @@ public class TrianglePrintingProgram {
 
         System.out.println();
 
-        for(int i = 1; i <= 10; i++) {
-            for(int j = 1; j <= i; j++) {
+        for(int row = 1; row <= 10; row++) {
+            for(int column = 1; column <= row; column++) {
                 System.out.print(" ");
             }
-            for(int ii = 10; ii >= i; ii--) {
+            for(int rowTwo = 10; rowTwo >= row; rowTwo--) {
                 System.out.print("*");
             }
             System.out.println();
@@ -34,11 +32,11 @@ public class TrianglePrintingProgram {
 
         System.out.println();
 
-        for(int i = 10; i >= 1; i--) {
-            for(int j = 1; j <= i; j++) {
+        for(int row = 10; row >= 1; row--) {
+            for(int column = 1; column <= row; column++) {
                 System.out.print(" ");
             }
-            for(int ii = 10; ii >= i; ii--) {
+            for(int rowTwo = 10; rowTwo >= row; rowTwo--) {
                 System.out.print("*");
             }
             System.out.println();
