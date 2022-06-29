@@ -8,14 +8,13 @@ public class TicTacToe {
     private static Board board = new Board();
     private static Players player = PLAYER_ONE;
 
-    public static Board playAtIndex(int row, int column, BoardElements e){
+    public static void playAtIndex(int row, int column, BoardElements e){
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 if (Board.getBoardArray()[row][column].equals(EMPTY))
                     Board.setBoardArray(row, column, e);
             }
         }
-        return board;
     }
 
     public static void getPlayerPositionFromUserEntry(int entry, BoardElements e) {
